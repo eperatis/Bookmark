@@ -80,43 +80,42 @@ function insert_bookmark()
   global $connection;
    
     $data = json_decode(file_get_contents('php://input'), true); //getting data from the client
-    $employee_name=$data["employee_name"]; //separate them
-    $employee_salary=$data["employee_salary"];
-    $employee_age=$data["employee_age"];
-    echo $query="INSERT INTO employee SET employee_name='".$employee_name."', employee_salary='".$employee_salary."', employee_age='".$employee_age."'";
+    $name=$data["name"]; //separate them
+    $url=$data["url"];
+    echo $query="INSERT INTO bookmark SET name='".$name."', url='".$url."'";
     if(mysqli_query($connection, $query))
     {
        $response=array(
              'status' => 1,
-             'status_message' =>'Employee Added Successfully.'
+             'status_message' =>'Bookmark Added Successfully.'
               );
     }
     else
     {
        $response=array(
              'status' => 0,
-             'status_message' =>'Employee Addition Failed.'
+             'status_message' =>'Bookmark Addition Failed.'
              );
     }
     header('Content-Type: application/json');
     echo json_encode($response); //response with header 
                          }
-function delete_employee($id)
+function delete_bookmark($id)
 {
    global $connection;
-  $query="DELETE FROM employee WHERE id=".$id;
+  $query="DELETE FROM bookmark WHERE id=".$id;
    if(mysqli_query($connection, $query))
    {
      $response=array(
       'status' => 1,
-       'status_message' =>'Employee Deleted Successfully.'
+       'status_message' =>'Bookmark Deleted Successfully.'
       );
    }
    else
    {
       $response=array(
          'status' => 0,
-         'status_message' =>'Employee Deletion Failed.'
+         'status_message' =>'Bookmark Deletion Failed.'
       );
    }
    header('Content-Type: application/json');
@@ -128,22 +127,21 @@ function update_bookmark($id)
  {
    global $connection;
    $post_vars = json_decode(file_get_contents("php://input"),true);
-   $employee_name=$post_vars["employee_name"];
-   $employee_salary=$post_vars["employee_salary"];
-   $employee_age=$post_vars["employee_age"];
-   $query="UPDATE employee SET employee_name='".$employee_name."', employee_salary='".$employee_salary."', employee_age='".$employee_age."' WHERE id=".$id;
+   $name=$post_vars["name"];
+   $url=$post_vars["url"];
+   $query="UPDATE bookmark SET name='".$name."', url='".$url."' WHERE id=".$id;
    if(mysqli_query($connection, $query))
    {
       $response=array(
          'status' => 1,
-         'status_message' =>'Employee Updated Successfully.'
+         'status_message' =>'Bookmark Updated Successfully.'
       );
     }
     else
     {
         $response=array(
             'status' => 0,
-           'status_message' =>'Employee Updation Failed.'
+           'status_message' =>'Bookmark Updation Failed.'
         );
     }
     header('Content-Type: application/json');
