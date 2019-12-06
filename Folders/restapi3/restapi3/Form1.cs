@@ -70,7 +70,7 @@ namespace restapi3
             IRestResponse response = client.Execute(request);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_delete_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
             String ROUTE = "index.php/{id}";

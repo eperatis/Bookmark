@@ -33,20 +33,21 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button_post = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_url = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_get
             // 
             this.button_get.Location = new System.Drawing.Point(35, 23);
             this.button_get.Name = "button_get";
-            this.button_get.Size = new System.Drawing.Size(75, 23);
+            this.button_get.Size = new System.Drawing.Size(338, 23);
             this.button_get.TabIndex = 1;
             this.button_get.Text = "GET";
             this.button_get.UseVisualStyleBackColor = true;
@@ -66,7 +67,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(105, 313);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(187, 20);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Ide írd az id-t!";
             // 
@@ -88,19 +89,19 @@
             this.button_post.UseVisualStyleBackColor = true;
             this.button_post.Click += new System.EventHandler(this.button_post_Click);
             // 
-            // button4
+            // button_delete
             // 
-            this.button4.Location = new System.Drawing.Point(211, 311);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "DELETE";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_delete.Location = new System.Drawing.Point(298, 311);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(75, 23);
+            this.button_delete.TabIndex = 6;
+            this.button_delete.Text = "DELETE";
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(126, 21);
+            this.button5.Location = new System.Drawing.Point(131, 480);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 27);
             this.button5.TabIndex = 7;
@@ -141,23 +142,34 @@
             // 
             // textBox_url
             // 
-            this.textBox_url.Location = new System.Drawing.Point(27, 455);
+            this.textBox_url.Location = new System.Drawing.Point(27, 454);
             this.textBox_url.Name = "textBox_url";
             this.textBox_url.Size = new System.Drawing.Size(346, 20);
             this.textBox_url.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 522);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(350, 26);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Módosításhoz írd be a módosítandó ID-ját, majd írd be a név szekcióba \r\na nevet é" +
+    "s az url-t az url szekcióba.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 515);
+            this.ClientSize = new System.Drawing.Size(408, 563);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_url);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_post);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox2);
@@ -178,13 +190,14 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button_post;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.TextBox textBox_url;
+        private System.Windows.Forms.Label label3;
     }
 }
 
