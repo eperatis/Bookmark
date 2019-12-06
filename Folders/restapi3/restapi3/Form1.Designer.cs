@@ -32,7 +32,7 @@
             this.button_getid = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_post = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,14 +78,15 @@
             this.listBox1.Size = new System.Drawing.Size(338, 238);
             this.listBox1.TabIndex = 4;
             // 
-            // button3
+            // button_post
             // 
-            this.button3.Location = new System.Drawing.Point(24, 365);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "POST (ADD)";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_post.Location = new System.Drawing.Point(24, 365);
+            this.button_post.Name = "button_post";
+            this.button_post.Size = new System.Drawing.Size(75, 23);
+            this.button_post.TabIndex = 5;
+            this.button_post.Text = "POST (ADD)";
+            this.button_post.UseVisualStyleBackColor = true;
+            this.button_post.Click += new System.EventHandler(this.button_post_Click);
             // 
             // button4
             // 
@@ -105,7 +106,6 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "Módosít (PUT)";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button_post);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button_getid);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.Button button_getid;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_post;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;

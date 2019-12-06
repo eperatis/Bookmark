@@ -57,7 +57,7 @@ namespace restapi3
             textBox1.Text = content.Substring(1, content.Length - 2);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_post_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
             var request = new RestRequest(ROUTE, Method.POST);  //index is kellett mögé
@@ -68,7 +68,6 @@ namespace restapi3
                 url = textBox_url.Text
             });
             IRestResponse response = client.Execute(request);
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -78,12 +77,6 @@ namespace restapi3
             var request = new RestRequest(ROUTE, Method.DELETE);
             request.AddParameter("id", textBox2.Text);
             IRestResponse response = client.Execute(request);
-            
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
             
         }
     }
