@@ -35,6 +35,8 @@ namespace restapi3
             var client = new RestClient(URL);
             var request = new RestRequest(ROUTE, Method.GET);
 
+            listBox1.Items.Clear();
+
             IRestResponse<List<Bookmark>> response = client.Execute<List<Bookmark>>(request);
             foreach (Bookmark bk in response.Data)
             {
@@ -45,14 +47,14 @@ namespace restapi3
             //textBox1.Text = content;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_getid_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
             String ROUTE = "index.php"+"?id="+textBox2.Text;
             var request = new RestRequest(ROUTE, Method.GET);
             IRestResponse response = client.Execute(request);
-            var content = response.Content;
-            textBox1.Text = content;
+            var content = response.Content.Split(',')[2].Split(':')[1].ToString();
+            textBox1.Text = content.Substring(1, content.Length - 2);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -62,9 +64,8 @@ namespace restapi3
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Bookmark
             {
-                /*employee_name = "Kanga",
-                employee_age = 101,
-                employee_salary = 20000*/
+                name = textBox_name.Text,
+                url = textBox_url.Text
             });
             IRestResponse response = client.Execute(request);
 
