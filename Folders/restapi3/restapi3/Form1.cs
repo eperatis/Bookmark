@@ -14,7 +14,7 @@ namespace restapi3
     public partial class Form1 : Form
     {
 
-        String URL = "http://localhost:8080/restphp/";
+        String URL = "http://localhost:80/rest/";
         String ROUTE = "index.php";
 
         public Form1()
@@ -78,6 +78,20 @@ namespace restapi3
             request.AddParameter("id", textBox2.Text);
             IRestResponse response = client.Execute(request);
             
+        }
+
+        private void button_put_Click(object sender, EventArgs e)
+        {
+            var client = new RestClient(URL);
+            String ROUTE = "index.php" + "?id=" + textBox2.Text;
+            var request = new RestRequest(ROUTE, Method.PUT);
+            request.RequestFormat = DataFormat.Json;
+            request.AddBody(new Bookmark
+            {
+                name = textBox_name.Text,
+                url = textBox_url.Text
+            });
+            IRestResponse response = client.Execute(request);
         }
     }
 
