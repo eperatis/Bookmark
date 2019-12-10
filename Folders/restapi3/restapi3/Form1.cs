@@ -53,10 +53,8 @@ namespace restapi3
             String ROUTE = "index.php"+"?id="+textBox2.Text;
             var request = new RestRequest(ROUTE, Method.GET);
             IRestResponse response = client.Execute(request);
-            var content = response.Content.ToString();
-            textBox1.Text = content;
-            //var content = response.Content.Split(',')[2].Split(':')[1].ToString();
-            //textBox1.Text = content.Substring(1, content.Length - 2);
+            var content = response.Content.Split(',')[2].Split(':')[1].ToString();
+            textBox1.Text = content.Substring(1, content.Length - 2);
         }
 
         private void button_post_Click(object sender, EventArgs e)
