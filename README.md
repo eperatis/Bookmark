@@ -4,7 +4,7 @@
  What I learned while I make this project
  - How is working a restapi
  - How to use authentication
- - How to use and build GET, POST, PUT methods
+ - How to use and build GET, POST, PUT, DELETE methods
  
  How to test the application
  - Download or clone the project
