@@ -23,10 +23,6 @@ namespace restapi3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-           
-
-
         }
 
         private void button_get_Click(object sender, EventArgs e)
@@ -41,9 +37,6 @@ namespace restapi3
             {
                 listBox1.Items.Add(bk.Id+" "+bk.name+" "+bk.url);
             }
-            
-            //var content = response.Content;
-            //textBox1.Text = content;
         }
 
         private void button_getid_Click(object sender, EventArgs e)
@@ -59,7 +52,7 @@ namespace restapi3
         private void button_post_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
-            var request = new RestRequest("index.php" + "?A=" + AUTH, Method.POST);  //index is kellett mögé
+            var request = new RestRequest("index.php" + "?A=" + AUTH, Method.POST);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Bookmark
             {
