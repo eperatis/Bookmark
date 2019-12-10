@@ -5,6 +5,7 @@
  - How is working a restapi
  - How to use authentication
  - How to use and build GET, POST, PUT, DELETE methods
+ - How to debug my code correctly
  
  How to test the application
  - Download or clone the project
