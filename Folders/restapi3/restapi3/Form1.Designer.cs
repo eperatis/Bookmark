@@ -46,7 +46,7 @@
             // button_get
             // 
             this.button_get.Location = new System.Drawing.Point(47, 28);
-            this.button_get.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_get.Margin = new System.Windows.Forms.Padding(4);
             this.button_get.Name = "button_get";
             this.button_get.Size = new System.Drawing.Size(451, 28);
             this.button_get.TabIndex = 1;
@@ -57,7 +57,7 @@
             // button_getid
             // 
             this.button_getid.Location = new System.Drawing.Point(32, 382);
-            this.button_getid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_getid.Margin = new System.Windows.Forms.Padding(4);
             this.button_getid.Name = "button_getid";
             this.button_getid.Size = new System.Drawing.Size(100, 28);
             this.button_getid.TabIndex = 2;
@@ -68,7 +68,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(140, 385);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(248, 22);
             this.textBox2.TabIndex = 3;
@@ -79,7 +79,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(47, 69);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(449, 292);
             this.listBox1.TabIndex = 4;
@@ -87,7 +87,7 @@
             // button_post
             // 
             this.button_post.Location = new System.Drawing.Point(32, 449);
-            this.button_post.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_post.Margin = new System.Windows.Forms.Padding(4);
             this.button_post.Name = "button_post";
             this.button_post.Size = new System.Drawing.Size(100, 28);
             this.button_post.TabIndex = 5;
@@ -98,7 +98,7 @@
             // button_delete
             // 
             this.button_delete.Location = new System.Drawing.Point(397, 383);
-            this.button_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_delete.Margin = new System.Windows.Forms.Padding(4);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(100, 28);
             this.button_delete.TabIndex = 6;
@@ -109,7 +109,7 @@
             // button_put
             // 
             this.button_put.Location = new System.Drawing.Point(175, 591);
-            this.button_put.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_put.Margin = new System.Windows.Forms.Padding(4);
             this.button_put.Name = "button_put";
             this.button_put.Size = new System.Drawing.Size(141, 33);
             this.button_put.TabIndex = 7;
@@ -120,7 +120,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(32, 417);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(464, 22);
             this.textBox1.TabIndex = 8;
@@ -148,7 +148,7 @@
             // textBox_name
             // 
             this.textBox_name.Location = new System.Drawing.Point(36, 507);
-            this.textBox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(460, 22);
             this.textBox_name.TabIndex = 11;
@@ -156,7 +156,7 @@
             // textBox_url
             // 
             this.textBox_url.Location = new System.Drawing.Point(36, 559);
-            this.textBox_url.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_url.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_url.Name = "textBox_url";
             this.textBox_url.Size = new System.Drawing.Size(460, 22);
             this.textBox_url.TabIndex = 12;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button_getid);
             this.Controls.Add(this.button_get);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Bookmarker";
             this.Load += new System.EventHandler(this.Form1_Load);
