@@ -15,7 +15,7 @@ namespace restapi3
     {
 
         String URL = "http://localhost:80/rest/";
-        String AUTH = "admin|admin";
+        String ROUTE = "index.php";
 
         public Form1()
         {
@@ -33,7 +33,7 @@ namespace restapi3
         private void button_get_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
-            var request = new RestRequest("index.php" + "?A=" + AUTH, Method.GET);
+            var request = new RestRequest(ROUTE, Method.GET);
 
             listBox1.Items.Clear();
 
@@ -51,7 +51,7 @@ namespace restapi3
         {
             var client = new RestClient(URL);
             String ROUTE = "index.php"+"?id="+textBox2.Text;
-            var request = new RestRequest(ROUTE + "?A=" + AUTH, Method.GET);
+            var request = new RestRequest(ROUTE, Method.GET);
             IRestResponse response = client.Execute(request);
             var content = response.Content.ToString();
             textBox1.Text = content;
@@ -62,7 +62,7 @@ namespace restapi3
         private void button_post_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
-            var request = new RestRequest("index.php" + "?A=" + AUTH, Method.POST);  //index is kellett mögé
+            var request = new RestRequest(ROUTE, Method.POST);  //index is kellett mögé
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Bookmark
             {
@@ -76,7 +76,7 @@ namespace restapi3
         {
             var client = new RestClient(URL);
             String ROUTE = "index.php/{id}";
-            var request = new RestRequest(ROUTE + "?A=" + AUTH, Method.DELETE);
+            var request = new RestRequest(ROUTE, Method.DELETE);
             request.AddParameter("id", textBox2.Text);
             IRestResponse response = client.Execute(request);
             
@@ -85,7 +85,7 @@ namespace restapi3
         private void button_put_Click(object sender, EventArgs e)
         {
             var client = new RestClient(URL);
-            String ROUTE = "index.php" + "?id=" + textBox2.Text + "?A=" + AUTH;
+            String ROUTE = "index.php" + "?id=" + textBox2.Text;
             var request = new RestRequest(ROUTE, Method.PUT);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Bookmark
