@@ -6,41 +6,42 @@ $connection =  $db->getConnstring();
 $request_method=$_SERVER["REQUEST_METHOD"];
 //which method
 
-switch($request_method)
-{
-  case 'GET':
-   // GET with id
-   if(!empty($_GET["id"]))
-   {
-    $id=intval($_GET["id"]);
-    get_bookmarksid($id);
-   }
-   else
-   {
-     get_bookmarks(); //all bookmark
-   }
-   break;
- case 'POST':
-  // Insert new bookmark with POST
-  insert_bookmark();
-  break;
+if(array_key_exists('A', $_GET) && $_GET['A'] == 'admin|admin') {
+	switch($request_method)
+	{
+	  case 'GET':
+	   // GET with id
+	   if(!empty($_GET["id"]))
+	   {
+	    $id=intval($_GET["id"]);
+	    get_bookmarksid($id);
+	   }
+	   else
+	   {
+     		get_bookmarks(); //all bookmark
+	   }
+	   break;
+	 case 'POST':
+	  // Insert new bookmark with POST
+	  insert_bookmark();
+	  break;
 
- case 'PUT':
-   // Update a bookmark (with id) and PUT method
-   $id=intval($_GET["id"]);
-   update_bookmark($id);
-   break;
- case 'DELETE':
-   // Delete a bookmark with ID, DELETE method
-   $id=intval($_GET["id"]);
-   delete_bookmark($id);
-   break;
- default:
-  // Invalid Request Method
-    header("HTTP/1.0 405 Method Not Allowed");
-    break;
-} 
-
+	 case 'PUT':
+	   // Update a bookmark (with id) and PUT method
+	   $id=intval($_GET["id"]);
+	   update_bookmark($id);
+	   break;
+	 case 'DELETE':
+	   // Delete a bookmark with ID, DELETE method
+	   $id=intval($_GET["id"]);
+	   delete_bookmark($id);
+	   break;
+	 default:
+	  // Invalid Request Method
+	    header("HTTP/1.0 405 Method Not Allowed");
+	    break;
+	} 
+}
 
 
 function get_bookmarks()
